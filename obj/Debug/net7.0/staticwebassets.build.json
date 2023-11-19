@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "azHXnCDQ3gmAUjjmGnMdRsleH/yZo6/V99GNoX2W+HY=",
+  "Source": "big_wallet",
+  "BasePath": "_content/big_wallet",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

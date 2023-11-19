@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\big_wallet.props" />
+</Project>
