@@ -50,6 +50,31 @@ namespace big_wallet.Controllers
             return wallet;
         }
 
+        [HttpGet("user/{id_user}")]
+        public async Task<ActionResult<IEnumerable<Wallet>>> GetWalletsByUserId(int id_user)
+        {
+            var wallets = await _context.Wallet.Where(w => w.id_user == id_user).ToListAsync();
+
+            if (wallets == null || wallets.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return wallets;
+        }
+
+         [HttpGet("user/{id_user}/{id_key_coin}")]
+        public async Task<ActionResult<IEnumerable<Wallet>>> GetWalletsByUserIdByKeyCoin(int id_user, string id_key_coin)
+        {
+            var wallets = await _context.Wallet.Where(w => w.id_user == id_user && w.id_key_coin == id_key_coin).ToListAsync();
+
+            if (wallets == null || wallets.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return wallets;
+        }
         // PUT: api/Wallet/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
